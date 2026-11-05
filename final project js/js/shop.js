@@ -228,9 +228,9 @@ const cartmenu = document.getElementById("cart-menu");
 const allproduct = document.getElementById("allproduct");
 const cartItemsContainer = document.querySelector(".items-cart");
 const cartchang = document.querySelector(".dynamic-1");
-const cartafteradd = document.getElementById(".dynamic-2");
 const totalPriceElement = document.querySelector(".total-price");
 let filtered = data;
+// const confirmdel=document.getElementById("confirm-delete");
 
 function displayproduct(){
     let items="";
@@ -368,12 +368,27 @@ else {
 
 }
 // delet item from cart
-function removeItem(i) {
-    cart.splice(i, 1);
-    displayCart();
-    // cartchang.classList.add("active");
+const confirmDelete = document.getElementById("confirm-delete");
+const yesDelete = document.getElementById("yes-delete");
+const cancelDelete = document.getElementById("cancel-delete");
 
-// displayCart();
+let deleteIndex;
+
+function removeItem(i) {
+    deleteIndex = i;
+    confirmDelete.classList.add("active");
+}
+
+yesDelete.onclick = function() {
+    cart.splice(deleteIndex, 1);
+
+    displayCart();
+
+    confirmDelete.classList.remove("active");
+}
+
+cancelDelete.onclick = function() {
+    confirmDelete.classList.remove("active");
 }
 // decrease amount
 function decreaseAmount(num) {
