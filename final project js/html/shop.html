@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../style/splide.min.css">
+    
+    <link rel="stylesheet" href="../style/style.css">
+    <title>final-js</title>
+</head>
+<body>
+    <!-- nav -->
+     <nav id="nav" class="mainave">
+        <div class="navleft">
+            <div class="left">
+                <div class="mnue" id="menu">
+                    <button><i class="fa-solid fa-equals"></i></button>
+                </div>
+                <div class="leftlogo">
+                    <img src="../assets/img/Logo.jpg" alt="">
+
+                </div>
+                <div class="leftitem">
+                    <ul>
+                        <li>
+                            <a  href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">our productes</a>
+                        </li>
+                        <li>
+                            <a href="">journal</a>
+                        </li>
+                        <li>
+                            <a href="">about us</a>
+                        </li>
+                        <li>
+                            <a href="">connactes</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            </div>
+            <div class="right">
+                <div class="price">
+                    <div class="mainhover">
+                        <span id="mainoption">UK$</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    
+                    
+                    <div class="droup_down">
+                        <div class="option">
+                            <span>USD$</span>
+                        </div>
+                        <div class="option">
+                            <span>EUR$</span>
+                        </div>
+                        <div class="option">
+                            <span>EG</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="icons">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button><i class="fa-regular fa-user"></i></button>
+                    <button id="cartbtn">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>0</span>
+                    </button>
+                </div>
+
+            </div>
+            
+            
+        
+
+
+
+
+     </nav>
+     <!-- nav -->
+      <!-- menu of nave -->
+    <div class="menucontent">
+        <div class="allmenu">
+        <div class="close">
+            <button><span>x</span></button>
+        </div>
+        <div class="logo">
+            <img src="../assets/img/Logo.jpg" alt="">
+        </div>
+    <div class="search">
+        <input type="text" placeholder="search for product...">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+
+    </div>
+    <div class="menueicon">
+        <ul>
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="#">our productes</a>
+            </li>
+            <li>
+                <a href="">journal</a>
+            </li>
+            <li>
+                <a href="">about us</a>
+            </li>
+            <li>
+                <a href="">connactes</a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-regular fa-user"></i>
+                    <!-- <button></button> -->
+                    <span>account</span>
+
+                </a>
+            </li>
+            <li>
+                <a href="" class="cart-menu"> 
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p id="cart-menu">cart<span>£0.00</span></p> 
+                </a>
+            </li>
+        </ul>
+    </div>
+        </div>
+    </div>
+<!-- menu of nave -->
+<section class="shop-hero">
+    <h2>All <span>Products</span></h2>
+    <p>Shop now, not later. Browse the best of our favorite sale styles and brands.</p>
+    <div class="btn">
+        <button onclick="filterCategory('All')">All</button>
+        <button onclick="filterCategory('Audio')">Audio</button>
+        <button onclick="filterCategory('Gaming')">Gaming</button>
+        <button onclick="filterCategory('Computers')">Computers</button>
+        <button onclick="filterCategory('Wearables')">Wearables</button>
+        <button onclick="filterCategory('Smart Phones')">Smart Phones</button>
+        <button onclick="filterCategory('Smart Home')">Smart Home</button>
+    </div>
+    
+
+
+</section>
+
+<section class="productes">
+    <div class="allproduct" id="allproduct">
+
+    </div>
+
+</section>
+
+<!-- /////////////cart*************** -->
+<section class="cart">
+    <div class="close-cart" id="close-cart">
+        <button><span>x</span></button>
+    </div>
+    <div class="items-cart">
+    
+    <div class="static">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <p>cart</p>
+    </div>
+    <div class="dynamic-1">
+        <p>no products in cart</p>
+        <a href="#">return to shop</a>
+    </div>
+    <!-- <div class="dynamic-2">
+        <div class="card">
+            <img src="../assets/img/Product-images-1-2-min-600x600.jpg" alt="">
+            <div class="info">
+                <h3>name</h3>
+                <div class="otherinf">
+                    <div class="quantity">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <p>£ 299.00</p>
+                
+                </div>
+        </div>
+        <div class="delitem">
+            <button>x</button>
+        </div>
+    </div>
+    </div> -->
+    
+    </div><div class="total-price">
+
+    </div>
+</section>
+
+
+<div id="addalert">
+    <i class="fa-regular fa-circle-check"></i>
+    <p>product added to cart</p>
+</div>
+<!-- /////////////cart*************** -->
+
+
+
+
+    <!-- footer section////////////////////////////////////////////////////////////////// -->
+<footer class="footer">
+    <div class="upperfooter">
+    <div class="frist">
+        <img src="../assets/img/XSTORE-footer-min.png" alt="">
+        <p>Address: 1234 Fashion Street, Suite 567, New York, NY</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Email: info@example.com</p>
+    </div>
+    
+    <div class="scound">
+        <ul>
+            <li class="header">
+                <a href="">Collections</a>
+            </li>
+            <li>
+                <a href="">Headphones</a>
+            </li>
+            <li>
+                <a href="">Speakers</a>
+            </li>
+            <li>
+                <a href="">Accessories</a>
+            </li>
+            <li>
+                <a href="">Home Cinema</a>
+            </li>
+            <li>
+                <a href="">LED TVs</a>
+            </li>
+            <li>
+                <a href="">Sound Bars</a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="thired">
+                <ul>
+            <li class="header">
+                <a href="">information</a>
+            </li>
+            <li>
+                <a href="">Wholesale</a>
+            </li>
+            <li>
+                <a href="">Become a Retailer</a>
+            </li>
+            <li>
+                <a href="">Corporate Orders</a>
+            </li>
+            <li>
+                <a href="">Affiliates</a>
+            </li>
+            <li>
+                <a href="">Gifts Cards</a>
+            </li>
+            <li>
+                <a href="">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <div class="fouth">
+        <h3>Stay Up to Date with New Releases</h3>
+        <p>Get notified about new updates, products, tips and tutorials. No spam. You can always unsubscribe.</p>
+        <div class="search">
+            <input type="search" placeholder="YOUR EMAIL ID.......">
+            <button>subscribtion</button>
+        </div>
+        
+    </div>
+    </div>
+    <div class="midel">
+        <div class="left">
+            <a href="#">$ USD <i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#">English <i class="fa-solid fa-chevron-down"></i></a>
+        </div>
+        <div class="center">
+            <img src="../assets/img/payments-footer-img.png" alt="">
+        </div>
+        <div class="right">
+
+    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="#"><i class="fa-brands fa-telegram"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+        </div>
+    </div>
+    <div class="last">
+        <div class="left">
+            <p>Copyright © 2026 XStore theme. Created by 8theme – WordPress WooCommerce themes.</p>
+        </div>
+        <div class="right">
+            <a href="">Terms & Condition</a>
+            <a href="">Refund Policy</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms Of Use </a>
+        </div>
+    </div>
+</footer>
+
+<!-- footer section////////////////////////////////////////////////////////////////// -->
+<!-- 
+<section class="end-end">
+    <div class="continer">
+        <a class="home">
+            <i class="fa-solid fa-house"></i>
+            <p>home</p>
+        </a>
+        <a href="#" class="shop">
+            <i class="fa-solid fa-store"></i>
+            <p>shop</p>
+        </a>
+        <div class="cart" id="cart-end">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <p>cart</p>
+            <span>0</span>
+        </div>
+        <div class="more">
+            <div class="open">
+                <i class="fa-solid fa-ellipsis"></i>
+                <p>more</p>
+            </div>
+            <div class="close">
+                <p>X</p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="more">
+        <div class="header">
+            more....
+        </div>
+        <div class="body">
+            <ul>
+                        <li>
+                            <a  href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="active" href="#">our productes</a>
+                        </li>
+                        <li>
+                            <a href="">journal</a>
+                        </li>
+                        <li>
+                            <a href="">about us</a>
+                        </li>
+                        <li>
+                            <a href="">connactes</a>
+                        </li>
+                    </ul>
+        </div>
+    </div>
+
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button id="scrollTop">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+<script src="../js/shop.js"></script>
+
+</body>
+</html>
